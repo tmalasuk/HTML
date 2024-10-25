@@ -1,0 +1,90 @@
+/*
+    comments dont get marked up
+
+selector {
+    property: value;
+    property: value;
+}
+
+*/
+
+/*
+variables store values
+    - stored in the :root element
+Functions do things
+    -var()
+*/
+
+:root {
+    --color-dark: #3F3F37;
+    --color-light: #FAFAEF;
+    --color-accent: #068D9D;
+    --color-link: #F18805;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--color-light);
+}
+
+body{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    color: var(--color-dark);
+}
+
+main {
+    padding: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+}
+
+section {
+    padding-bottom: 24px;
+}
+
+h1 {
+    margin-bottom: 48px;
+    margin-top: 48px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 48px;
+}
+
+h2{
+    padding-bottom: 12px;
+}
+
+p {
+    padding-bottom: 12px;
+}
+
+a {
+    color: var(--color-link);
+}
+
+/*
+> direct child selector
+    grabs all children match
+*/
+
+body > header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 12px;
+}
+
+body > header > strong {
+    display: block;
+    padding-bottom: 6px;
+}
