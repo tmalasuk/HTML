@@ -1,0 +1,146 @@
+:root{
+    --color-dark:#2E282A;
+    --color-light: #F8EDE3;
+    --color-accent: #8ebd9d;
+    --color-link: #E8B86D;
+    --color-link-shade-1: #c79e5d;
+    --max-site-width: 1200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* ================== START: BASIC STYLES ============ */
+
+html {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+footer{
+    text-align: center;
+}
+
+li {
+    margin-left: 2em;
+}
+
+.list{
+    padding-bottom: 1em;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+body > header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1em 0;
+}
+
+body > header strong {
+    display: block;
+    margin-bottom: .5em;
+}
+
+body > main > article {
+    padding: 2em 0;
+}
+
+p {
+    padding-bottom: 1em;
+}
+/*
+classes in css
+    -apply styles to elements
+    -use the class attribute
+    -select classes by prefexing with a period
+    -any number of elements can have the same class
+*/
+
+.site-width {
+    max-width: var(--max-site-width);
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+
+
+/* ================== END: BASIC STYLES ============ */
+
+/* ================== START: CARDS SECTION STYLES ============ */
+.cards{
+    display: grid;
+    /* grid is a parent focused layout method. The parent says how the children will display */
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1em;
+    margin: 3em 0;
+}
+
+.card > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card > figure {
+    height: 300px;
+}
+
+
+/* ================== END: CARDS SECTION STYLES ============ */
+
+
+/* ================== START: CARD STYLES ============ */
+.cards > .card {
+    background-color: white;
+    color: var(--color-dark);
+    transition: transform .4s ease-in-out;
+}
+/* psuedo selector means part of a selection */
+
+.cards > .card:hover {
+    transform: scale(1.01);
+}
+
+.cards > .card > .card__info {
+    padding: 1em;
+}
+
+.cards > .card > .card__info > header {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+}
+
+/* ================== END: CARD STYLES ============ */
+
+/* ================== START: BUTTON STYLES ============ */
+.btn {
+    background-color: var(--color-link);
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--color-link-shade-1);
+}
+
+
+/* ================== END: BUTTON STYLES ============ */
